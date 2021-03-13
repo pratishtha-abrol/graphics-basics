@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_2d037/fast && /usr/bin/make -f CMakeFiles/cmTC_2d037.dir/build.make CMakeFiles/cmTC_2d037.dir/build
+Run Build Command(s):/usr/bin/make cmTC_612c1/fast && /usr/bin/make -f CMakeFiles/cmTC_612c1.dir/build.make CMakeFiles/cmTC_612c1.dir/build
 make[1]: Entering directory '/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2d037.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_2d037.dir/src.c.o   -c /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_2d037
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d037.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_2d037.dir/src.c.o  -o cmTC_2d037 
-/usr/bin/ld: CMakeFiles/cmTC_2d037.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_612c1.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_612c1.dir/src.c.o   -c /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_612c1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_612c1.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_612c1.dir/src.c.o  -o cmTC_612c1 
+/usr/bin/ld: CMakeFiles/cmTC_612c1.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_2d037.dir/build.make:87: cmTC_2d037] Error 1
+make[1]: *** [CMakeFiles/cmTC_612c1.dir/build.make:87: cmTC_612c1] Error 1
 make[1]: Leaving directory '/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_2d037/fast] Error 2
+make: *** [Makefile:121: cmTC_612c1/fast] Error 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_88258/fast && /usr/bin/make -f CMakeFiles/cmTC_88258.dir/build.make CMakeFiles/cmTC_88258.dir/build
+Run Build Command(s):/usr/bin/make cmTC_f8bde/fast && /usr/bin/make -f CMakeFiles/cmTC_f8bde.dir/build.make CMakeFiles/cmTC_f8bde.dir/build
 make[1]: Entering directory '/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_88258.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_88258.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_88258
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88258.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_88258.dir/CheckFunctionExists.c.o  -o cmTC_88258  -lpthreads 
+Building C object CMakeFiles/cmTC_f8bde.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f8bde.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f8bde
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f8bde.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_f8bde.dir/CheckFunctionExists.c.o  -o cmTC_f8bde  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_88258.dir/build.make:87: cmTC_88258] Error 1
+make[1]: *** [CMakeFiles/cmTC_f8bde.dir/build.make:87: cmTC_f8bde] Error 1
 make[1]: Leaving directory '/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_88258/fast] Error 2
+make: *** [Makefile:121: cmTC_f8bde/fast] Error 2
 
 
 

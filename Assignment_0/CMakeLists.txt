@@ -8,8 +8,9 @@ add_subdirectory (external)
 
 # On Visual 2005 and above, this module can set the debug working directory
 cmake_policy(SET CMP0026 OLD)
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/external/rpavlik-cmake-modules-fe2273")
-
+# list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/external/rpavlik-cmake-modules-fe2273")
+# include(CreateLaunchers)
+# include(MSVCMultipleProcessCompile)
 
 
 if(INCLUDE_DISTRIB)
@@ -41,9 +42,20 @@ add_definitions(
 
 add_executable(Assignment_0 
 	src/main.cpp
+	common/shader.cpp
+	common/shader.hpp
+
+	src/FragmentShader.fragmentshader
+	src/VertexShader.vertexshader
 )
 target_link_libraries(Assignment_0
 	${ALL_LIBS}
 )
+
+
 # Xcode and Visual working directories
 set_target_properties(Assignment_0 PROPERTIES XCODE_ATTRIBUTE_CONFIGURATION_BUILD_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/")
+add_custom_command(
+   TARGET Assignment_0 POST_BUILD
+   COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}/Assignment_0${CMAKE_EXECUTABLE_SUFFIX}" "${CMAKE_CURRENT_SOURCE_DIR}/src/"
+)

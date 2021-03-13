@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "Assignment_0"
   "Assignment_0.pdb"
+  "CMakeFiles/Assignment_0.dir/common/shader.cpp.o"
   "CMakeFiles/Assignment_0.dir/src/main.cpp.o"
 )
 

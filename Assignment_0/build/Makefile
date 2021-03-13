@@ -507,6 +507,33 @@ tearing/fast:
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/tearing.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/tearing.dir/build
 .PHONY : tearing/fast
 
+common/shader.o: common/shader.cpp.o
+
+.PHONY : common/shader.o
+
+# target to build an object file
+common/shader.cpp.o:
+	$(MAKE) -f CMakeFiles/Assignment_0.dir/build.make CMakeFiles/Assignment_0.dir/common/shader.cpp.o
+.PHONY : common/shader.cpp.o
+
+common/shader.i: common/shader.cpp.i
+
+.PHONY : common/shader.i
+
+# target to preprocess a source file
+common/shader.cpp.i:
+	$(MAKE) -f CMakeFiles/Assignment_0.dir/build.make CMakeFiles/Assignment_0.dir/common/shader.cpp.i
+.PHONY : common/shader.cpp.i
+
+common/shader.s: common/shader.cpp.s
+
+.PHONY : common/shader.s
+
+# target to generate assembly for a file
+common/shader.cpp.s:
+	$(MAKE) -f CMakeFiles/Assignment_0.dir/build.make CMakeFiles/Assignment_0.dir/common/shader.cpp.s
+.PHONY : common/shader.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -573,6 +600,9 @@ help:
 	@echo "... cursor"
 	@echo "... empty"
 	@echo "... tearing"
+	@echo "... common/shader.o"
+	@echo "... common/shader.i"
+	@echo "... common/shader.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
