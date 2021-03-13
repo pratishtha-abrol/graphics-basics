@@ -507,6 +507,33 @@ tearing/fast:
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/tearing.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/tearing.dir/build
 .PHONY : tearing/fast
 
+common/controls.o: common/controls.cpp.o
+
+.PHONY : common/controls.o
+
+# target to build an object file
+common/controls.cpp.o:
+	$(MAKE) -f CMakeFiles/Assignment_0.dir/build.make CMakeFiles/Assignment_0.dir/common/controls.cpp.o
+.PHONY : common/controls.cpp.o
+
+common/controls.i: common/controls.cpp.i
+
+.PHONY : common/controls.i
+
+# target to preprocess a source file
+common/controls.cpp.i:
+	$(MAKE) -f CMakeFiles/Assignment_0.dir/build.make CMakeFiles/Assignment_0.dir/common/controls.cpp.i
+.PHONY : common/controls.cpp.i
+
+common/controls.s: common/controls.cpp.s
+
+.PHONY : common/controls.s
+
+# target to generate assembly for a file
+common/controls.cpp.s:
+	$(MAKE) -f CMakeFiles/Assignment_0.dir/build.make CMakeFiles/Assignment_0.dir/common/controls.cpp.s
+.PHONY : common/controls.cpp.s
+
 common/shader.o: common/shader.cpp.o
 
 .PHONY : common/shader.o
@@ -600,6 +627,9 @@ help:
 	@echo "... cursor"
 	@echo "... empty"
 	@echo "... tearing"
+	@echo "... common/controls.o"
+	@echo "... common/controls.i"
+	@echo "... common/controls.s"
 	@echo "... common/shader.o"
 	@echo "... common/shader.i"
 	@echo "... common/shader.s"

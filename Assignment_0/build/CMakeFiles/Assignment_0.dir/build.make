@@ -83,16 +83,31 @@ CMakeFiles/Assignment_0.dir/common/shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Assignment_0.dir/common/shader.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/common/shader.cpp -o CMakeFiles/Assignment_0.dir/common/shader.cpp.s
 
+CMakeFiles/Assignment_0.dir/common/controls.cpp.o: CMakeFiles/Assignment_0.dir/flags.make
+CMakeFiles/Assignment_0.dir/common/controls.cpp.o: ../common/controls.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Assignment_0.dir/common/controls.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Assignment_0.dir/common/controls.cpp.o -c /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/common/controls.cpp
+
+CMakeFiles/Assignment_0.dir/common/controls.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Assignment_0.dir/common/controls.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/common/controls.cpp > CMakeFiles/Assignment_0.dir/common/controls.cpp.i
+
+CMakeFiles/Assignment_0.dir/common/controls.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Assignment_0.dir/common/controls.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/common/controls.cpp -o CMakeFiles/Assignment_0.dir/common/controls.cpp.s
+
 # Object files for target Assignment_0
 Assignment_0_OBJECTS = \
 "CMakeFiles/Assignment_0.dir/src/main.cpp.o" \
-"CMakeFiles/Assignment_0.dir/common/shader.cpp.o"
+"CMakeFiles/Assignment_0.dir/common/shader.cpp.o" \
+"CMakeFiles/Assignment_0.dir/common/controls.cpp.o"
 
 # External object files for target Assignment_0
 Assignment_0_EXTERNAL_OBJECTS =
 
 Assignment_0: CMakeFiles/Assignment_0.dir/src/main.cpp.o
 Assignment_0: CMakeFiles/Assignment_0.dir/common/shader.cpp.o
+Assignment_0: CMakeFiles/Assignment_0.dir/common/controls.cpp.o
 Assignment_0: CMakeFiles/Assignment_0.dir/build.make
 Assignment_0: /usr/lib/x86_64-linux-gnu/libGL.so
 Assignment_0: /usr/lib/x86_64-linux-gnu/libGLU.so
@@ -117,7 +132,7 @@ Assignment_0: /usr/lib/x86_64-linux-gnu/libXcursor.so
 Assignment_0: /usr/lib/x86_64-linux-gnu/libGL.so
 Assignment_0: /usr/lib/x86_64-linux-gnu/libGLU.so
 Assignment_0: CMakeFiles/Assignment_0.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Assignment_0"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Assignment_0"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Assignment_0.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/cmake -E copy /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/./Assignment_0 /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/src/
 

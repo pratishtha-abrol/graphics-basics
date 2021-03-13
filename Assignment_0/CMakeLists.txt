@@ -8,9 +8,6 @@ add_subdirectory (external)
 
 # On Visual 2005 and above, this module can set the debug working directory
 cmake_policy(SET CMP0026 OLD)
-# list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/external/rpavlik-cmake-modules-fe2273")
-# include(CreateLaunchers)
-# include(MSVCMultipleProcessCompile)
 
 
 if(INCLUDE_DISTRIB)
@@ -44,6 +41,8 @@ add_executable(Assignment_0
 	src/main.cpp
 	common/shader.cpp
 	common/shader.hpp
+	common/controls.cpp
+	common/controls.hpp
 
 	src/FragmentShader.fragmentshader
 	src/VertexShader.vertexshader

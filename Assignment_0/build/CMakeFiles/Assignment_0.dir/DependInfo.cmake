@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/common/controls.cpp" "/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles/Assignment_0.dir/common/controls.cpp.o"
   "/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/common/shader.cpp" "/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles/Assignment_0.dir/common/shader.cpp.o"
   "/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/src/main.cpp" "/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles/Assignment_0.dir/src/main.cpp.o"
   )
