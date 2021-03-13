@@ -70,6 +70,10 @@ CMakeFiles/Assignment_0.dir/src/main.cpp.o: ../external/glm-0.9.7.1/glm/exponent
 CMakeFiles/Assignment_0.dir/src/main.cpp.o: ../external/glm-0.9.7.1/glm/fwd.hpp
 CMakeFiles/Assignment_0.dir/src/main.cpp.o: ../external/glm-0.9.7.1/glm/geometric.hpp
 CMakeFiles/Assignment_0.dir/src/main.cpp.o: ../external/glm-0.9.7.1/glm/glm.hpp
+CMakeFiles/Assignment_0.dir/src/main.cpp.o: ../external/glm-0.9.7.1/glm/gtc/constants.hpp
+CMakeFiles/Assignment_0.dir/src/main.cpp.o: ../external/glm-0.9.7.1/glm/gtc/constants.inl
+CMakeFiles/Assignment_0.dir/src/main.cpp.o: ../external/glm-0.9.7.1/glm/gtc/matrix_transform.hpp
+CMakeFiles/Assignment_0.dir/src/main.cpp.o: ../external/glm-0.9.7.1/glm/gtc/matrix_transform.inl
 CMakeFiles/Assignment_0.dir/src/main.cpp.o: ../external/glm-0.9.7.1/glm/integer.hpp
 CMakeFiles/Assignment_0.dir/src/main.cpp.o: ../external/glm-0.9.7.1/glm/mat2x2.hpp
 CMakeFiles/Assignment_0.dir/src/main.cpp.o: ../external/glm-0.9.7.1/glm/mat2x3.hpp
