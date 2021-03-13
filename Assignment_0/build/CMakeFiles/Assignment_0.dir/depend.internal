@@ -93,6 +93,7 @@ CMakeFiles/Assignment_0.dir/common/shader.cpp.o
  /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/common/shader.cpp
  /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/common/shader.hpp
 CMakeFiles/Assignment_0.dir/src/main.cpp.o
+ ../common/controls.hpp
  ../common/shader.hpp
  ../external/glew-1.13.0/include/GL/glew.h
  ../external/glfw-3.1.2/include/GLFW/glfw3.h

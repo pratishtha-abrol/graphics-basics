@@ -92,6 +92,7 @@ CMakeFiles/Assignment_0.dir/common/shader.cpp.o: ../external/glew-1.13.0/include
 CMakeFiles/Assignment_0.dir/common/shader.cpp.o: ../common/shader.cpp
 CMakeFiles/Assignment_0.dir/common/shader.cpp.o: ../common/shader.hpp
 
+CMakeFiles/Assignment_0.dir/src/main.cpp.o: ../common/controls.hpp
 CMakeFiles/Assignment_0.dir/src/main.cpp.o: ../common/shader.hpp
 CMakeFiles/Assignment_0.dir/src/main.cpp.o: ../external/glew-1.13.0/include/GL/glew.h
 CMakeFiles/Assignment_0.dir/src/main.cpp.o: ../external/glfw-3.1.2/include/GLFW/glfw3.h
