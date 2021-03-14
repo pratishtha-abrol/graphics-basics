@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../external/glut-3.7/include/GL/glut.h
+windows.h
+-
+GL/gl.h
+-
+GL/glu.h
+-
+
+/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/src/camera.h
+
+/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/src/main2.c
+GL/gl.h
+-
+GL/glut.h
+-
+stdlib.h
+-
+polyhedron.h
+/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/src/polyhedron.h
+camera.h
+/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/src/camera.h
+
+/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/src/polyhedron.h
+
