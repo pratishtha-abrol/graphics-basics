@@ -1,6 +1,6 @@
 // Include GLFW
 #include <GLFW/glfw3.h>
-extern GLFWwindow* window; 
+extern GLFWwindow* window; // The "extern" keyword here is to access the variable "window" declared in tutorialXXX.cpp. This is a hack to keep the tutorials simple. Please avoid this.
 
 // Include GLM
 #include <glm/glm.hpp>
@@ -19,11 +19,11 @@ glm::mat4 getProjectionMatrix(){
 	return ProjectionMatrix;
 }
 
+
 // Initial position : on +Z
-glm::vec3 position = glm::vec3( 0, 0, -5 ); 
-// glm::vec3 position = glm::vec3(4,3,-3);
+glm::vec3 position = glm::vec3( 0, 0, 5 ); 
 // Initial horizontal angle : toward -Z
-float horizontalAngle = 3.14f/2.0f;
+float horizontalAngle = 3.14f;
 // Initial vertical angle : none
 float verticalAngle = 0.0f;
 // Initial Field of View
@@ -32,10 +32,12 @@ float initialFoV = 45.0f;
 float speed = 3.0f; // 3 units / second
 float mouseSpeed = 0.005f;
 
-// glfwGetTime is called only once, the first time this function is called
-static double lastTime = glfwGetTime();
+
 
 void computeMatricesFromInputs(){
+
+	// glfwGetTime is called only once, the first time this function is called
+	static double lastTime = glfwGetTime();
 
 	// Compute time difference between current and last frame
 	double currentTime = glfwGetTime();
@@ -65,46 +67,36 @@ void computeMatricesFromInputs(){
 		0,
 		cos(horizontalAngle - 3.14f/2.0f)
 	);
-
+	
 	// Up vector
 	glm::vec3 up = glm::cross( right, direction );
-	// glm::vec3 up = glm::vec3(0,1,0);
 
 	// Move forward
-	if (glfwGetKey( window, GLFW_KEY_KP_ADD ) == GLFW_PRESS){
-		position -= direction * deltaTime * speed;
-	}
-	// Move backward
-	if (glfwGetKey( window, GLFW_KEY_KP_SUBTRACT ) == GLFW_PRESS){
+	if (glfwGetKey( window, GLFW_KEY_UP ) == GLFW_PRESS){
 		position += direction * deltaTime * speed;
 	}
-	// // Move up
-	// if (glfwGetKey( window, GLFW_KEY_UP ) == GLFW_PRESS){
-	// 	position -= top * deltaTime * speed;
-	// }
-	// // Move down
-	// if (glfwGetKey( window, GLFW_KEY_DOWN ) == GLFW_PRESS){
-	// 	position += top * deltaTime * speed;
-	// }
+	// Move backward
+	if (glfwGetKey( window, GLFW_KEY_DOWN ) == GLFW_PRESS){
+		position -= direction * deltaTime * speed;
+	}
 	// Strafe right
 	if (glfwGetKey( window, GLFW_KEY_RIGHT ) == GLFW_PRESS){
-		position -= right * deltaTime * speed;
+		position += right * deltaTime * speed;
 	}
 	// Strafe left
 	if (glfwGetKey( window, GLFW_KEY_LEFT ) == GLFW_PRESS){
-		position += right * deltaTime * speed;
+		position -= right * deltaTime * speed;
 	}
 
 	float FoV = initialFoV;// - 5 * glfwGetMouseWheel(); // Now GLFW 3 requires setting up a callback for this. It's a bit too complicated for this beginner's tutorial, so it's disabled instead.
 
-	// Projection matrix : 45° Field of View, 4:3 ratio, display range : 0.1 unit <-> 100 units
-	// ProjectionMatrix = glm::perspective(glm::radians(FoV), 4.0f / 3.0f, 0.1f, 100.0f);
-	ProjectionMatrix = glm::perspective(glm::radians(45.0f), 4.0f / 3.0f, 0.1f, 100.0f);
+	// Projection matrix : 45� Field of View, 4:3 ratio, display range : 0.1 unit <-> 100 units
+	ProjectionMatrix = glm::perspective(glm::radians(FoV), 4.0f / 3.0f, 0.1f, 100.0f);
 	// Camera matrix
 	ViewMatrix       = glm::lookAt(
-								position,
-								glm::vec3(0,0,0)+direction,
-								up
+								position,           // Camera is here
+								glm::vec3(4,3,-3)+direction, // and looks here : at the same position, plus "direction"
+								up                  // Head is up (set to 0,-1,0 to look upside-down)
 						   );
 
 	// For the next frame, the "last time" will be "now"

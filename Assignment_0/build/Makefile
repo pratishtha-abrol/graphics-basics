@@ -94,7 +94,7 @@ install/fast: preinstall/fast
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"libassimp3.0-r1270-OGLtuts\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -157,17 +157,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Assignment_0
+# Target rules for targets named Dodecahedron1
 
 # Build rule for target.
-Assignment_0: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Assignment_0
-.PHONY : Assignment_0
+Dodecahedron1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Dodecahedron1
+.PHONY : Dodecahedron1
 
 # fast build rule for target.
-Assignment_0/fast:
-	$(MAKE) -f CMakeFiles/Assignment_0.dir/build.make CMakeFiles/Assignment_0.dir/build
-.PHONY : Assignment_0/fast
+Dodecahedron1/fast:
+	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/build
+.PHONY : Dodecahedron1/fast
+
+#=============================================================================
+# Target rules for targets named ANTTWEAKBAR_116_OGLCORE_GLFW
+
+# Build rule for target.
+ANTTWEAKBAR_116_OGLCORE_GLFW: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ANTTWEAKBAR_116_OGLCORE_GLFW
+.PHONY : ANTTWEAKBAR_116_OGLCORE_GLFW
+
+# fast build rule for target.
+ANTTWEAKBAR_116_OGLCORE_GLFW/fast:
+	$(MAKE) -f external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build.make external/CMakeFiles/ANTTWEAKBAR_116_OGLCORE_GLFW.dir/build
+.PHONY : ANTTWEAKBAR_116_OGLCORE_GLFW/fast
 
 #=============================================================================
 # Target rules for targets named GLEW_1130
@@ -507,13 +520,91 @@ tearing/fast:
 	$(MAKE) -f external/glfw-3.1.2/tests/CMakeFiles/tearing.dir/build.make external/glfw-3.1.2/tests/CMakeFiles/tearing.dir/build
 .PHONY : tearing/fast
 
+#=============================================================================
+# Target rules for targets named zlib
+
+# Build rule for target.
+zlib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 zlib
+.PHONY : zlib
+
+# fast build rule for target.
+zlib/fast:
+	$(MAKE) -f external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/build.make external/assimp-3.0.1270/contrib/zlib/CMakeFiles/zlib.dir/build
+.PHONY : zlib/fast
+
+#=============================================================================
+# Target rules for targets named assimp
+
+# Build rule for target.
+assimp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 assimp
+.PHONY : assimp
+
+# fast build rule for target.
+assimp/fast:
+	$(MAKE) -f external/assimp-3.0.1270/code/CMakeFiles/assimp.dir/build.make external/assimp-3.0.1270/code/CMakeFiles/assimp.dir/build
+.PHONY : assimp/fast
+
+#=============================================================================
+# Target rules for targets named BulletSoftBody
+
+# Build rule for target.
+BulletSoftBody: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BulletSoftBody
+.PHONY : BulletSoftBody
+
+# fast build rule for target.
+BulletSoftBody/fast:
+	$(MAKE) -f external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/build.make external/bullet-2.81-rev2613/src/BulletSoftBody/CMakeFiles/BulletSoftBody.dir/build
+.PHONY : BulletSoftBody/fast
+
+#=============================================================================
+# Target rules for targets named BulletCollision
+
+# Build rule for target.
+BulletCollision: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BulletCollision
+.PHONY : BulletCollision
+
+# fast build rule for target.
+BulletCollision/fast:
+	$(MAKE) -f external/bullet-2.81-rev2613/src/BulletCollision/CMakeFiles/BulletCollision.dir/build.make external/bullet-2.81-rev2613/src/BulletCollision/CMakeFiles/BulletCollision.dir/build
+.PHONY : BulletCollision/fast
+
+#=============================================================================
+# Target rules for targets named BulletDynamics
+
+# Build rule for target.
+BulletDynamics: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BulletDynamics
+.PHONY : BulletDynamics
+
+# fast build rule for target.
+BulletDynamics/fast:
+	$(MAKE) -f external/bullet-2.81-rev2613/src/BulletDynamics/CMakeFiles/BulletDynamics.dir/build.make external/bullet-2.81-rev2613/src/BulletDynamics/CMakeFiles/BulletDynamics.dir/build
+.PHONY : BulletDynamics/fast
+
+#=============================================================================
+# Target rules for targets named LinearMath
+
+# Build rule for target.
+LinearMath: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 LinearMath
+.PHONY : LinearMath
+
+# fast build rule for target.
+LinearMath/fast:
+	$(MAKE) -f external/bullet-2.81-rev2613/src/LinearMath/CMakeFiles/LinearMath.dir/build.make external/bullet-2.81-rev2613/src/LinearMath/CMakeFiles/LinearMath.dir/build
+.PHONY : LinearMath/fast
+
 common/controls.o: common/controls.cpp.o
 
 .PHONY : common/controls.o
 
 # target to build an object file
 common/controls.cpp.o:
-	$(MAKE) -f CMakeFiles/Assignment_0.dir/build.make CMakeFiles/Assignment_0.dir/common/controls.cpp.o
+	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/common/controls.cpp.o
 .PHONY : common/controls.cpp.o
 
 common/controls.i: common/controls.cpp.i
@@ -522,7 +613,7 @@ common/controls.i: common/controls.cpp.i
 
 # target to preprocess a source file
 common/controls.cpp.i:
-	$(MAKE) -f CMakeFiles/Assignment_0.dir/build.make CMakeFiles/Assignment_0.dir/common/controls.cpp.i
+	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/common/controls.cpp.i
 .PHONY : common/controls.cpp.i
 
 common/controls.s: common/controls.cpp.s
@@ -531,7 +622,7 @@ common/controls.s: common/controls.cpp.s
 
 # target to generate assembly for a file
 common/controls.cpp.s:
-	$(MAKE) -f CMakeFiles/Assignment_0.dir/build.make CMakeFiles/Assignment_0.dir/common/controls.cpp.s
+	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/common/controls.cpp.s
 .PHONY : common/controls.cpp.s
 
 common/shader.o: common/shader.cpp.o
@@ -540,7 +631,7 @@ common/shader.o: common/shader.cpp.o
 
 # target to build an object file
 common/shader.cpp.o:
-	$(MAKE) -f CMakeFiles/Assignment_0.dir/build.make CMakeFiles/Assignment_0.dir/common/shader.cpp.o
+	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/common/shader.cpp.o
 .PHONY : common/shader.cpp.o
 
 common/shader.i: common/shader.cpp.i
@@ -549,7 +640,7 @@ common/shader.i: common/shader.cpp.i
 
 # target to preprocess a source file
 common/shader.cpp.i:
-	$(MAKE) -f CMakeFiles/Assignment_0.dir/build.make CMakeFiles/Assignment_0.dir/common/shader.cpp.i
+	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/common/shader.cpp.i
 .PHONY : common/shader.cpp.i
 
 common/shader.s: common/shader.cpp.s
@@ -558,35 +649,35 @@ common/shader.s: common/shader.cpp.s
 
 # target to generate assembly for a file
 common/shader.cpp.s:
-	$(MAKE) -f CMakeFiles/Assignment_0.dir/build.make CMakeFiles/Assignment_0.dir/common/shader.cpp.s
+	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/common/shader.cpp.s
 .PHONY : common/shader.cpp.s
 
-src/main.o: src/main.cpp.o
+src/dodecahedron1.o: src/dodecahedron1.cpp.o
 
-.PHONY : src/main.o
+.PHONY : src/dodecahedron1.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/Assignment_0.dir/build.make CMakeFiles/Assignment_0.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/dodecahedron1.cpp.o:
+	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/src/dodecahedron1.cpp.o
+.PHONY : src/dodecahedron1.cpp.o
 
-src/main.i: src/main.cpp.i
+src/dodecahedron1.i: src/dodecahedron1.cpp.i
 
-.PHONY : src/main.i
+.PHONY : src/dodecahedron1.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/Assignment_0.dir/build.make CMakeFiles/Assignment_0.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/dodecahedron1.cpp.i:
+	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/src/dodecahedron1.cpp.i
+.PHONY : src/dodecahedron1.cpp.i
 
-src/main.s: src/main.cpp.s
+src/dodecahedron1.s: src/dodecahedron1.cpp.s
 
-.PHONY : src/main.s
+.PHONY : src/dodecahedron1.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/Assignment_0.dir/build.make CMakeFiles/Assignment_0.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/dodecahedron1.cpp.s:
+	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/src/dodecahedron1.cpp.s
+.PHONY : src/dodecahedron1.cpp.s
 
 # Help Target
 help:
@@ -600,7 +691,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Assignment_0"
+	@echo "... Dodecahedron1"
+	@echo "... ANTTWEAKBAR_116_OGLCORE_GLFW"
 	@echo "... GLEW_1130"
 	@echo "... uninstall"
 	@echo "... glfw"
@@ -627,15 +719,21 @@ help:
 	@echo "... cursor"
 	@echo "... empty"
 	@echo "... tearing"
+	@echo "... zlib"
+	@echo "... assimp"
+	@echo "... BulletSoftBody"
+	@echo "... BulletCollision"
+	@echo "... BulletDynamics"
+	@echo "... LinearMath"
 	@echo "... common/controls.o"
 	@echo "... common/controls.i"
 	@echo "... common/controls.s"
 	@echo "... common/shader.o"
 	@echo "... common/shader.i"
 	@echo "... common/shader.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/dodecahedron1.o"
+	@echo "... src/dodecahedron1.i"
+	@echo "... src/dodecahedron1.s"
 .PHONY : help
 
 
