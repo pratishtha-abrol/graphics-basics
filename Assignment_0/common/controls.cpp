@@ -67,17 +67,32 @@ void computeMatricesFromInputs(){
 		0,
 		cos(horizontalAngle - 3.14f/2.0f)
 	);
+
+	// Top vector
+	glm::vec3 top = glm::vec3(
+		0,
+		-1*sin(horizontalAngle - 3.14f/2.0f), 
+		cos(horizontalAngle - 3.14f/2.0f)
+	);
 	
 	// Up vector
 	glm::vec3 up = glm::cross( right, direction );
 
 	// Move forward
-	if (glfwGetKey( window, GLFW_KEY_UP ) == GLFW_PRESS){
+	if (glfwGetKey( window, GLFW_KEY_KP_ADD ) == GLFW_PRESS){
 		position += direction * deltaTime * speed;
 	}
 	// Move backward
-	if (glfwGetKey( window, GLFW_KEY_DOWN ) == GLFW_PRESS){
+	if (glfwGetKey( window, GLFW_KEY_KP_SUBTRACT ) == GLFW_PRESS){
 		position -= direction * deltaTime * speed;
+	}
+	// Strafe up
+	if (glfwGetKey( window, GLFW_KEY_UP ) == GLFW_PRESS){
+		position += top * deltaTime * speed;
+	}
+	// Strafe down
+	if (glfwGetKey( window, GLFW_KEY_DOWN ) == GLFW_PRESS){
+		position -= top * deltaTime * speed;
 	}
 	// Strafe right
 	if (glfwGetKey( window, GLFW_KEY_RIGHT ) == GLFW_PRESS){
@@ -95,7 +110,7 @@ void computeMatricesFromInputs(){
 	// Camera matrix
 	ViewMatrix       = glm::lookAt(
 								position,           // Camera is here
-								glm::vec3(4,3,-3)+direction, // and looks here : at the same position, plus "direction"
+								position+direction, // and looks here : at the same position, plus "direction"
 								up                  // Head is up (set to 0,-1,0 to look upside-down)
 						   );
 

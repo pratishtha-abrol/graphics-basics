@@ -64,26 +64,26 @@ add_custom_command(
 )
 
 
-# add_executable(Dodecahedron2
-# 	src/dodecahedron2.cpp
-# 	common/shader.cpp
-# 	common/shader.hpp
-# 	common/controls.cpp
-# 	common/controls.hpp
+add_executable(Dodecahedron2
+	src/dodecahedron2.cpp
+	common/shader.cpp
+	common/shader.hpp
+	common/controls.cpp
+	common/controls.hpp
 
-# 	src/FragmentShader.fragmentshader
-# 	src/VertexShader.vertexshader
-# )
-# target_link_libraries(Dodecahedron2
-# 	${ALL_LIBS}
-# )
+	src/FragmentShader.fragmentshader
+	src/VertexShader.vertexshader
+)
+target_link_libraries(Dodecahedron2
+	${ALL_LIBS}
+)
 
 
-# set_target_properties(Dodecahedron2 PROPERTIES XCODE_ATTRIBUTE_CONFIGURATION_BUILD_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/")
-# add_custom_command(
-#    TARGET Dodecahedron2 POST_BUILD
-#    COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}/Dodecahedron2${CMAKE_EXECUTABLE_SUFFIX}" "${CMAKE_CURRENT_SOURCE_DIR}/src/"
-# )
+set_target_properties(Dodecahedron2 PROPERTIES XCODE_ATTRIBUTE_CONFIGURATION_BUILD_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/")
+add_custom_command(
+   TARGET Dodecahedron2 POST_BUILD
+   COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}/Dodecahedron2${CMAKE_EXECUTABLE_SUFFIX}" "${CMAKE_CURRENT_SOURCE_DIR}/src/"
+)
 
 
 # add_executable(Dodecahedron3

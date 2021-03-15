@@ -157,6 +157,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Dodecahedron2
+
+# Build rule for target.
+Dodecahedron2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Dodecahedron2
+.PHONY : Dodecahedron2
+
+# fast build rule for target.
+Dodecahedron2/fast:
+	$(MAKE) -f CMakeFiles/Dodecahedron2.dir/build.make CMakeFiles/Dodecahedron2.dir/build
+.PHONY : Dodecahedron2/fast
+
+#=============================================================================
 # Target rules for targets named Dodecahedron1
 
 # Build rule for target.
@@ -604,6 +617,7 @@ common/controls.o: common/controls.cpp.o
 
 # target to build an object file
 common/controls.cpp.o:
+	$(MAKE) -f CMakeFiles/Dodecahedron2.dir/build.make CMakeFiles/Dodecahedron2.dir/common/controls.cpp.o
 	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/common/controls.cpp.o
 .PHONY : common/controls.cpp.o
 
@@ -613,6 +627,7 @@ common/controls.i: common/controls.cpp.i
 
 # target to preprocess a source file
 common/controls.cpp.i:
+	$(MAKE) -f CMakeFiles/Dodecahedron2.dir/build.make CMakeFiles/Dodecahedron2.dir/common/controls.cpp.i
 	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/common/controls.cpp.i
 .PHONY : common/controls.cpp.i
 
@@ -622,6 +637,7 @@ common/controls.s: common/controls.cpp.s
 
 # target to generate assembly for a file
 common/controls.cpp.s:
+	$(MAKE) -f CMakeFiles/Dodecahedron2.dir/build.make CMakeFiles/Dodecahedron2.dir/common/controls.cpp.s
 	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/common/controls.cpp.s
 .PHONY : common/controls.cpp.s
 
@@ -631,6 +647,7 @@ common/shader.o: common/shader.cpp.o
 
 # target to build an object file
 common/shader.cpp.o:
+	$(MAKE) -f CMakeFiles/Dodecahedron2.dir/build.make CMakeFiles/Dodecahedron2.dir/common/shader.cpp.o
 	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/common/shader.cpp.o
 .PHONY : common/shader.cpp.o
 
@@ -640,6 +657,7 @@ common/shader.i: common/shader.cpp.i
 
 # target to preprocess a source file
 common/shader.cpp.i:
+	$(MAKE) -f CMakeFiles/Dodecahedron2.dir/build.make CMakeFiles/Dodecahedron2.dir/common/shader.cpp.i
 	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/common/shader.cpp.i
 .PHONY : common/shader.cpp.i
 
@@ -649,6 +667,7 @@ common/shader.s: common/shader.cpp.s
 
 # target to generate assembly for a file
 common/shader.cpp.s:
+	$(MAKE) -f CMakeFiles/Dodecahedron2.dir/build.make CMakeFiles/Dodecahedron2.dir/common/shader.cpp.s
 	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/common/shader.cpp.s
 .PHONY : common/shader.cpp.s
 
@@ -679,6 +698,33 @@ src/dodecahedron1.cpp.s:
 	$(MAKE) -f CMakeFiles/Dodecahedron1.dir/build.make CMakeFiles/Dodecahedron1.dir/src/dodecahedron1.cpp.s
 .PHONY : src/dodecahedron1.cpp.s
 
+src/dodecahedron2.o: src/dodecahedron2.cpp.o
+
+.PHONY : src/dodecahedron2.o
+
+# target to build an object file
+src/dodecahedron2.cpp.o:
+	$(MAKE) -f CMakeFiles/Dodecahedron2.dir/build.make CMakeFiles/Dodecahedron2.dir/src/dodecahedron2.cpp.o
+.PHONY : src/dodecahedron2.cpp.o
+
+src/dodecahedron2.i: src/dodecahedron2.cpp.i
+
+.PHONY : src/dodecahedron2.i
+
+# target to preprocess a source file
+src/dodecahedron2.cpp.i:
+	$(MAKE) -f CMakeFiles/Dodecahedron2.dir/build.make CMakeFiles/Dodecahedron2.dir/src/dodecahedron2.cpp.i
+.PHONY : src/dodecahedron2.cpp.i
+
+src/dodecahedron2.s: src/dodecahedron2.cpp.s
+
+.PHONY : src/dodecahedron2.s
+
+# target to generate assembly for a file
+src/dodecahedron2.cpp.s:
+	$(MAKE) -f CMakeFiles/Dodecahedron2.dir/build.make CMakeFiles/Dodecahedron2.dir/src/dodecahedron2.cpp.s
+.PHONY : src/dodecahedron2.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -691,6 +737,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... Dodecahedron2"
 	@echo "... Dodecahedron1"
 	@echo "... ANTTWEAKBAR_116_OGLCORE_GLFW"
 	@echo "... GLEW_1130"
@@ -734,6 +781,9 @@ help:
 	@echo "... src/dodecahedron1.o"
 	@echo "... src/dodecahedron1.i"
 	@echo "... src/dodecahedron1.s"
+	@echo "... src/dodecahedron2.o"
+	@echo "... src/dodecahedron2.i"
+	@echo "... src/dodecahedron2.s"
 .PHONY : help
 
 

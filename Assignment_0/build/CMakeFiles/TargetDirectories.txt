@@ -4,6 +4,7 @@
 /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles/list_install_components.dir
 /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles/rebuild_cache.dir
 /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles/edit_cache.dir
+/home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles/Dodecahedron2.dir
 /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/CMakeFiles/Dodecahedron1.dir
 /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/external/CMakeFiles/install/strip.dir
 /home/pratzz/Desktop/OpenSource/graphics-basics/Assignment_0/build/external/CMakeFiles/install/local.dir
