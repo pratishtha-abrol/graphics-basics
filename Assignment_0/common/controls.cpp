@@ -95,11 +95,11 @@ void computeMatricesFromInputs(){
 		position -= top * deltaTime * speed;
 	}
 	// Strafe right
-	if (glfwGetKey( window, GLFW_KEY_RIGHT ) == GLFW_PRESS){
+	if (glfwGetKey( window, GLFW_KEY_LEFT ) == GLFW_PRESS){
 		position += right * deltaTime * speed;
 	}
 	// Strafe left
-	if (glfwGetKey( window, GLFW_KEY_LEFT ) == GLFW_PRESS){
+	if (glfwGetKey( window, GLFW_KEY_RIGHT ) == GLFW_PRESS){
 		position -= right * deltaTime * speed;
 	}
 
