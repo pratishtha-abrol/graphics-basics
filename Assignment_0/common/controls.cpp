@@ -54,24 +54,6 @@ void computeMatricesFromInputs(){
 	horizontalAngle += mouseSpeed * float(0- xpos );
 	verticalAngle   += mouseSpeed * float( 0 - ypos );
 
-
-	// // Rotate left
-	// if (glfwGetKey( window, GLFW_KEY_A  ) == GLFW_PRESS){
-	// 	horizontalAngle += float(1024/2 - xpos -1);
-	// }
-	// // Rotate right
-	// if (glfwGetKey( window, GLFW_KEY_D  ) == GLFW_PRESS){
-	// 	horizontalAngle += float(1024/2 - xpos +1);
-	// }
-	// // Rotate up
-	// if (glfwGetKey( window, GLFW_KEY_W  ) == GLFW_PRESS){
-	// 	verticalAngle += float(768/2 - xpos -1);
-	// }
-	// // Rotate down
-	// if (glfwGetKey( window, GLFW_KEY_X  ) == GLFW_PRESS){
-	// 	verticalAngle += float(768/2 - xpos +1);
-	// }
-
 	// Direction : Spherical coordinates to Cartesian coordinates conversion
 	glm::vec3 direction(
 		cos(verticalAngle) * sin(horizontalAngle), 
@@ -98,11 +80,11 @@ void computeMatricesFromInputs(){
 
 	// Move forward
 	if (glfwGetKey( window, GLFW_KEY_KP_ADD ) == GLFW_PRESS){
-		position -= direction * deltaTime * speed;
+		position += direction * deltaTime * speed;
 	}
 	// Move backward
 	if (glfwGetKey( window, GLFW_KEY_KP_SUBTRACT ) == GLFW_PRESS){
-		position += direction * deltaTime * speed;
+		position -= direction * deltaTime * speed;
 	}
 	// Strafe up
 	if (glfwGetKey( window, GLFW_KEY_UP ) == GLFW_PRESS){
