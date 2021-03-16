@@ -53,7 +53,7 @@ int main(){
 
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     glfwPollEvents();
-    glfwSetCursorPos(window, 1024/2, 768/2);
+    glfwSetCursorPos(window, 0, 0);
 
     // Backrgound: Dark Blue
     glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
