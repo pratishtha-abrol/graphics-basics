@@ -32,7 +32,7 @@ int main(){
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // We don't want the old OpenGL 
 
     // Open a window and create its OpenGL context
-    window = glfwCreateWindow( 1024, 768, "Dodecahedron 1", NULL, NULL);
+    window = glfwCreateWindow( 1024, 768, "Dodecahedron 3", NULL, NULL);
     if( window == NULL ){
         fprintf( stderr, "Failed to open GLFW window.\n" );
         glfwTerminate();
@@ -53,7 +53,7 @@ int main(){
 
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
     glfwPollEvents();
-    glfwSetCursorPos(window, 0, 0);
+    glfwSetCursorPos(window, 1024/2, 768/2);
 
     // Backrgound: Dark Blue
     glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
@@ -235,6 +235,9 @@ int main(){
         glfwSwapBuffers(window);
         glfwPollEvents();
         if (glfwGetKey( window, GLFW_KEY_R ) == GLFW_PRESS){
+            rotate = 1;
+	    }
+        if (glfwGetKey( window, GLFW_KEY_C ) == GLFW_PRESS){
             rotate = 1;
 	    }
         if (glfwGetKey( window, GLFW_KEY_S ) == GLFW_PRESS){

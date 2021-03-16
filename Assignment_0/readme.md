@@ -8,4 +8,5 @@
 > + key : move object towards +z
 > - key : move object towards -z
 > R key : start object rotation
+> C key : start camera rotation around object
 > S key : stop object rotation
