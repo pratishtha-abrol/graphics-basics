@@ -222,6 +222,8 @@ int main(){
 	glGenBuffers(1, &colorbuffer);
 	glBindBuffer(GL_ARRAY_BUFFER, colorbuffer);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(g_color_buffer_data), g_color_buffer_data, GL_STATIC_DRAW);
+    int ticks = 0;
+    int rotate = 0;
 
 
     do{
@@ -239,6 +241,7 @@ int main(){
 		glm::mat4 ProjectionMatrix = getProjectionMatrix();
 		glm::mat4 ViewMatrix = getViewMatrix();
 		glm::mat4 ModelMatrix = glm::mat4(1.0);
+        ModelMatrix = glm::rotate(ModelMatrix, 0.05f * ticks, glm::vec3(0,1,0));
 		glm::mat4 MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
 
 		// Send our transformation to the currently bound shader, 
@@ -274,6 +277,17 @@ int main(){
         // Swap buffers
         glfwSwapBuffers(window);
         glfwPollEvents();
+        if (glfwGetKey( window, GLFW_KEY_R ) == GLFW_PRESS){
+            rotate = 1;
+	    }
+        if (glfwGetKey( window, GLFW_KEY_S ) == GLFW_PRESS){
+            rotate = 0;
+            ticks = 0;
+	    }
+        if (rotate){
+            ticks++;
+        }
+        
 
     } // Check if the ESC key was pressed or the window was closed
     while( glfwGetKey(window, GLFW_KEY_ESCAPE ) != GLFW_PRESS &&
