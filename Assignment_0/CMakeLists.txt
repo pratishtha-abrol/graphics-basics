@@ -86,32 +86,32 @@ add_custom_command(
 )
 
 
-# add_executable(Dodecahedron3
-# 	src/dodecahedron3.cpp
-# 	common/shader.cpp
-# 	common/shader.hpp
-# 	common/controls.cpp
-# 	common/controls.hpp
-# 	common/texture.cpp
-# 	common/texture.hpp
-# 	common/objloader.cpp
-# 	common/objloader.hpp
-# 	common/vboindexer.cpp
-# 	common/vboindexer.hpp
-# 	common/tangentspace.hpp
-# 	common/tangentspace.cpp
-# 	common/quaternion_utils.cpp
-# 	common/quaternion_utils.hpp
+add_executable(Dodecahedron3
+	src/dodecahedron3.cpp
+	common/shader.cpp
+	common/shader.hpp
+	common/controls.cpp
+	common/controls.hpp
+	# common/texture.cpp
+	# common/texture.hpp
+	# common/objloader.cpp
+	# common/objloader.hpp
+	# common/vboindexer.cpp
+	# common/vboindexer.hpp
+	# common/tangentspace.hpp
+	# common/tangentspace.cpp
+	# common/quaternion_utils.cpp
+	# common/quaternion_utils.hpp
 
-# 	src/FragmentShader.fragmentshader
-# 	src/VertexShader.vertexshader
-# )
-# target_link_libraries(Dodecahedron3
-# 	${ALL_LIBS}
-# )
+	src/FragmentShader.fragmentshader
+	src/VertexShader.vertexshader
+)
+target_link_libraries(Dodecahedron3
+	${ALL_LIBS}
+)
 
-# set_target_properties(Dodecahedron3 PROPERTIES XCODE_ATTRIBUTE_CONFIGURATION_BUILD_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/")
-# add_custom_command(
-#    TARGET Dodecahedron3 POST_BUILD
-#    COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}/Dodecahedron3${CMAKE_EXECUTABLE_SUFFIX}" "${CMAKE_CURRENT_SOURCE_DIR}/src/"
-# )
+set_target_properties(Dodecahedron3 PROPERTIES XCODE_ATTRIBUTE_CONFIGURATION_BUILD_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/")
+add_custom_command(
+   TARGET Dodecahedron3 POST_BUILD
+   COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_BINARY_DIR}/${CMAKE_CFG_INTDIR}/Dodecahedron3${CMAKE_EXECUTABLE_SUFFIX}" "${CMAKE_CURRENT_SOURCE_DIR}/src/"
+)
