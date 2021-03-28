@@ -1,0 +1,3 @@
+/home/pratzz/Downloads/amaze-master/build/CMakeFiles/edit_cache.dir
+/home/pratzz/Downloads/amaze-master/build/CMakeFiles/rebuild_cache.dir
+/home/pratzz/Downloads/amaze-master/build/CMakeFiles/amaze.dir
