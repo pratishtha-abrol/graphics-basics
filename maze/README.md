@@ -1,4 +1,4 @@
-# amaze
+# maze
 A random maze generator.
 Mazes have one entrance and one exit, and can be navigated with arrow keys.
 
